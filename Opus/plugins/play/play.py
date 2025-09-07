@@ -26,7 +26,8 @@ from Opus.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 #sticker_id = "CAACAgUAAxkBAAIDG2i5G1-GgbejZ8QddOAp45geLzQfAALBFQACQ2zIVSOYW5wCt64ONgQ"
-sticker_id = "CAACAgUAAxkBAAEPUdRovCmoUGGXL0lhRoW85p1LbpAJpAAC1RgAAoNS4VVnVTx5XX2k9zYE"
+#sticker_id = "CAACAgUAAxkBAAEPUdRovCmoUGGXL0lhRoW85p1LbpAJpAAC1RgAAoNS4VVnVTx5XX2k9zYE"
+sticker_id = "CAACAgQAAxkBAAKZBWg8Qelft8W1KvK_dit1-QpRXva1AAI9FQACx32BULwYDUPM9LWPHgQ"
 
 @app.on_message(
     filters.command(
