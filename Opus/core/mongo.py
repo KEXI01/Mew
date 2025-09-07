@@ -10,7 +10,6 @@ from ..logging import LOGGER
 MONGO_URI = "mongodb+srv://Billa20:uAJc5rGK18FzOiJz@cluster0.ul24roe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DB_NAME = "MusicBot"
 
-# Initialize MongoDB clients
 try:
     if config.MONGO_DB_URI is None:
         LOGGER(__name__).warning(
@@ -24,7 +23,7 @@ try:
         LOGGER(__name__).info(
             "Using MusicBot database with provided MONGO_DB_URI for consistency."
         )
-        mongo_async = AsyncIOMotorClient(MONGO_URI)  # Ignore config.MONGO_DB_URI, use old URI
+        mongo_async = AsyncIOMotorClient(MONGO_URI)  
         mongo_sync = MongoClient(MONGO_URI)
         mongodb = mongo_async[DB_NAME]
         pymongodb = mongo_sync[DB_NAME]
@@ -99,5 +98,4 @@ class Database:
         except Exception as e:
             LOGGER(__name__).error(f"Error closing database connections: {e}")
 
-# Instantiate the database
 db = Database()
